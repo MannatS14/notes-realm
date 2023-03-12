@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notes/notepage.dart';
 import 'package:notes/page1.dart';
+import 'package:notes/provider/splash.dart';
 import 'package:sizer/sizer.dart';
 import './provider/notesprovider.dart';
 import 'package:provider/provider.dart';
@@ -27,7 +28,8 @@ class _MyAppState extends State<MyApp> {
           return MaterialApp(
             initialRoute: "/",
             routes: {
-              '/': (context) => const page1(),
+              '/': (context) => Splash(),
+              '/page1': (context) => page1(),
               '/notespage': (context) => const page2()
             },
             debugShowCheckedModeBanner: false,
